@@ -1,0 +1,54 @@
+@keyframes error_animation {
+    from {border-color: red;}
+    to {border-color: grey;}
+}
+
+.input-error {
+  border-color: grey;
+  animation-name: error_animation;
+  animation-duration: 10s;
+}
+
+.table-editable {
+  position: relative;
+  font-size:15px;
+}
+/*
+.table-editable th {
+        padding-left: 2px;
+        padding-right: 2px;
+        border-width: 1px;
+        border-style: inset;
+        border-color: gray;
+        text-align: left;
+}
+
+.table-editable td {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+*/
+.glyphicon {
+    font-size: 20px;
+}
+
+.table-remove {
+  color: #700;
+  cursor: pointer;
+  
+}
+
+.table-up, .table-down {
+  color: #007;
+  cursor: pointer;
+  
+}
+
+.table-add {
+  color: #070;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+

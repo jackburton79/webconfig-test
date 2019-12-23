@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Interface</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-tagsinput.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom_styles.css" />
+  </head>
+  <body class="MainPage">
+   <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Web Interface</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Configuration
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a id="editdefaultconfig" href="#">Edit default</a></li>
+          <li><a id="importconfig" href="#">Import from filesystem</a></li>
+          <li><a id="saveconfig" href="#">Save to filesystem</a></li>
+          <li><a id="downloadconfig" href="#">Download</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  </nav>
+    <div class="container">
+      <div id="table" class="table-editable">
+        <h1>Hosts</h1>
+        <table class="table table-striped table-hover" id="hosttable" data-role="table"></table>
+      </div>
+      <form class="form-inline" id="addhost">
+      <div class="form-group">
+        <label for="host_name">Host Name</label>
+        <input class="form-control" id="host_name" type="text" value="">
+        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+      </div>
+      <div class="form-group">
+        <label for="host_mac">MAC Address</label>
+        <input class="form-control" id = "host_mac" type="text" value="">
+        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Add Host">
+      </div>
+      </form>
+      
+      <div role="main" class="table-editable">
+        <h1>Groups</h1>
+        <!--span class="table-add glyphicon glyphicon-plus"></span-->
+        <table class="table" id="groupstable" data-role="table">
+        </table>
+      </div>
+      <form class="form-inline" id="addgroup">
+      <div class="form-group" id="groupsform">
+        <label for="group_name">Group Name</label>
+        <input type="text" class="form-control" id="group_name" value="">
+        <input type="submit" value="Add Group">
+      </div>
+      </form>
+      <div id="configuration">
+        <button id="writeconfbutton">Write Configuration</button>
+        <button id="downloadconfbutton">Download Configuration</button>
+      </div>
+    </div>
+    <div style="position:fixed;bottom:0;left:0;width:100%;" id="alerts" role="alert"></div>
+    <script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery-binarytransport.js"></script>
+    <script language="javascript" type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/bootstrap-tagsinput.min.js"></script>
+    <script language="javascript" type="text/javascript" src="table.js"></script>
+    <script language="javascript" type="text/javascript" src="client.js"></script>
+    <script language="javascript" type="text/javascript" src="support.js"></script>
+  </body>
+</html>
